@@ -3,16 +3,45 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
+  <script>
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = color;
+          i++;
+        }
+    }
+    function BodySetColor(color){
+      var target = document.querySelector('body').style;
+      target.color = color;
+    }
+    function BodyBackgroundColor(color){
+      var target = document.querySelector('body').style;
+      target.backgroundColor = color;
+    }
+    function nightDayHandler(self){
+      var target = document.querySelector('body').style;
+      if(self.value === 'night'){
+        BodyBackgroundColor('black');
+        BodySetColor('white');
+        self.value = 'day';
+
+        LinksSetColor('powderblue');
+      }else{
+        BodyBackgroundColor('white');
+        BodySetColor('black');
+        self.value = 'night';
+
+        LinksSetColor('blue');
+      }
+    }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-  ">
-  <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
+    nightDayHandler(this);
   ">
   <ol>
     <li><a href="1.html">HTML</a></li>
