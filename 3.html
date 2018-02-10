@@ -3,40 +3,8 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
-  <script>
-    function LinksSetColor(color){
-      var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = color;
-          i++;
-        }
-    }
-    function BodySetColor(color){
-      var target = document.querySelector('body').style;
-      target.color = color;
-    }
-    function BodyBackgroundColor(color){
-      var target = document.querySelector('body').style;
-      target.backgroundColor = color;
-    }
-    function nightDayHandler(self){
-      var target = document.querySelector('body').style;
-      if(self.value === 'night'){
-        BodyBackgroundColor('black');
-        BodySetColor('white');
-        self.value = 'day';
-
-        LinksSetColor('powderblue');
-      }else{
-        BodyBackgroundColor('white');
-        BodySetColor('black');
-        self.value = 'night';
-
-        LinksSetColor('blue');
-      }
-    }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
