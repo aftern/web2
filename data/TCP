@@ -1,0 +1,3 @@
+This is a list of TCP and UDP port numbers used bu protocols for operation of network applications.
+The Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) only need one port for duplex, bidirectional traffic.
+They usually use port numbers that match the services of the corresponding TCP or UDP implementation, if they exist.
